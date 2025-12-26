@@ -1,0 +1,67 @@
+{
+  "name": "ssh-client-mcp",
+  "version": "1.0.0",
+  "description": "SSH/SFTP MCP Server - Execute remote commands and transfer files via SSH for Claude AI",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ssh-client-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "ssh",
+    "sftp",
+    "remote",
+    "model-context-protocol",
+    "claude",
+    "anthropic",
+    "ai",
+    "cli",
+    "server",
+    "file-transfer"
+  ],
+  "author": "Ricky",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veithly/ssh-client-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/veithly/ssh-client-mcp/issues"
+  },
+  "homepage": "https://github.com/veithly/ssh-client-mcp#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "servers.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ssh2": "^1.16.0",
+    "uuid": "^11.0.3",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/ssh2": "^1.15.1",
+    "@types/uuid": "^10.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
